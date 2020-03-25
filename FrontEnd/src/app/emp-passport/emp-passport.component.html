@@ -1,0 +1,178 @@
+<div class="content" style="margin-top: 3px;">
+    <h2 style="text-align: center">Apply  Passport</h2>
+    <div class="inputContainer" style="margin-top: -10%;">
+      <!-- <form name="passportForm" #passportForm="ngForm" action="" id="join-us" novalidate> -->
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div> 
+          <div class="row">
+            <div class="col-4 icofont-iphone iphone-icone"></div>
+              <div class="col-5">
+                <input  type="text" class="cell-number" style="border-radius: 0px;"  maxlength= "10" name="cell" [(ngModel)]="cus.cell" (input)="numberValidate($event)" #cell="ngModel" required/>
+              </div>
+              <div class="col-3 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && cell.invalid" ></div>
+          </div>
+        <br />
+          <div class="row">
+              <div class="col-4 icofont-ui-v-card icone-right"></div>
+              <div class="box">
+                <select name="gender" [(ngModel)]="cus.gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+        <br/> 
+          <div class="row">
+            <div class="col-4 icofont-ui-user icone-right"></div>
+            <div class="col-3 input-lable">
+              <input type="text" name="firstName" placeholder="First Name" [(ngModel)]="cus.firstName" #firstName="ngModel" required />
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && firstName.invalid" ></div>
+          </div>
+        <br/>
+          <div class="row">
+            <div class="col-4 icofont-ui-user icone-right"></div>
+            <div class="col-3 input-lable">
+              <input type="text"  name="lastName" placeholder="Last Name" [(ngModel)]="cus.lastName" #lastName="ngModel" required/>
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && lastName.invalid" ></div>
+          </div>
+        <br />
+          <div class="row">
+            <div class="col-4 icone-right icofont-calendar"></div>
+            <div class="col-3 input-lable">
+              <input placeholder="Date Of Birth" type="date" name="dob" [(ngModel)]="cus.dob" #dob="ngModel" required/>
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && dob.invalid" ></div>
+          </div>
+        <br/>
+          <div class="row">
+            <div class="col-4 icofont-ui-user icone-right"></div>
+            <div class="col-3 input-lable">
+              <input placeholder="Mother Name" type="text" name="motherName" [(ngModel)]="cus.motherName" #motherName="ngModel"/>
+            </div>
+          </div>
+        <br />
+          <div class="row">
+              <div class="col-4 icofont-ui-v-card icone-right"></div>
+              <div class="box">
+                <select name="genter" [(ngModel)]="cus.mrg">
+                  <option value="single">Single</option>
+                  <option value="married">Married</option>
+                </select>
+              </div>
+            </div>
+        <br *ngIf="cus.mrg == 'married'"/>
+          <div class="row" *ngIf="cus.mrg == 'married'">
+            <div class="col-4 icofont-ui-user icone-right"></div>
+            <div class="col-3 input-lable">
+              <input placeholder="Spouse Name" type="text" name="spouseName" [(ngModel)]="cus.spouseName" #spouseName="ngModel"/>
+            </div>
+          </div>
+        <br />
+          <div class="row">
+            <div class="col-4 icone-right icofont-police"></div>
+            <div class="col-3 input-lable">
+              <input placeholder="Police Station" type="text" name="policeStation" [(ngModel)]="cus.policeStation" #policeStation="ngModel" required/>
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && policeStation.invalid" ></div>
+          </div>
+        <br/>
+          <div class="row">
+            <div class="col-4 icone-right icofont-address-book"></div>
+            <div class="col-3 input-lable">
+              <input placeholder="Street Name" type="text" name="streetName" [(ngModel)]="cus.streetName" #streetName="ngModel" required/>
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && streetName.invalid" ></div>
+          </div>
+        <br />
+          <div class="row">
+            <div class="col-4 icone-right icofont-address-book"></div>
+            <div class="col-3 input-lable">
+              <input placeholder="Post & Taluk" type="text" name="postAndTaluk" [(ngModel)]="cus.postAndTaluk" #postAndTaluk="ngModel" required/>
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && postAndTaluk.invalid" ></div>
+          </div>
+        <br />
+          <div class="row">
+            <div class="col-4 icone-right icofont-address-book"></div>
+            <div class="col-3 input-lable">
+              <input placeholder="District" type="text"  name="district" [(ngModel)]="cus.district" #district="ngModel" required/>
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && district.invalid" ></div>
+          </div>
+        <br/>
+        <div class="row">
+          <div class="col-4 icofont-google-map iphone-icone"></div>
+            <div class="col-2">
+              <input type="text" name="pincode" class="pincode" style="border-radius: 0px;" maxlength='6' [(ngModel)]="cus.pincode" (input)="numberValidate($event)" #pincode="ngModel" required/>
+            </div>
+            <div class="col-5 icofont-warning icofont-2x icone-left" *ngIf="f.submitted && pincode.invalid" ></div>
+        </div>
+        <br />
+          <div class="row">
+            <div class="col-4 icone-right icofont-address-book"></div>
+            <div class="col-3 input-lable"><input placeholder="Sate" type="text"  value="Tamil Nadu"/></div>
+          </div>
+        <br/>
+          <div class="row">
+            <div class="col-4 icofont-ui-v-card icone-right"></div>
+            <div class="box">
+              <select name="passportType" [(ngModel)]="cus.passportType">
+                <option value="fresh">Fresh</option>
+                <option value="reissue">Reissue</option>
+              </select>
+            </div>
+          </div>
+          <br/>
+          <div class="row" *ngIf="cus.passportType == 'reissue'">
+            <div class="col-4 icofont-ui-v-card icone-right"></div>
+            <div class="box">
+              <select>
+                <option value="fresh">Fresh</option>
+                <option value="reissue">Reissue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="submit">
+          <!-- <input class="submit" value="Submit" type="button"  (click)="savePassport()"/> -->
+          <button class="submit" (click)="savePassport()">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="content">
+      <strong>Notes</strong>
+      <ul>
+      <li>Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA irrespective of your residential address.</li>
+          <li>Please Fill <code>all mandatory</code> fields <code><span class="icofont-warning"></span></code>.</li>
+      </ul>
+  </div>
+
+
+
+  <button type="button" #demomodel class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="display: none;">
+    Launch demo modal
+  </button> 
+  
+  <div class="modal" id="exampleModalLong"  tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{cus.firstName}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

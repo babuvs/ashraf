@@ -1,0 +1,266 @@
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+
+<div class="body">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container">
+      <div class="logo float-left">
+        <h1 class="text-light">
+            <img src="assets/img/ashraf.png"></h1>
+      </div>
+    </div>
+    <div class="container">
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header">Home</a></li>
+          <li><a href="/#about">About Us</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="alert alert-danger alert" role="alert" *ngIf="isError">
+      Invalid token Number!
+    </div>
+    <div class="hero-container">
+      <h1>Welcome to Ashraf Air Travels</h1>
+      <h2>If you are always trying to be normal, you will never know how amazing you can be.</h2>
+      <div class="btn-get-started scrollto">
+        <input class="token" placeholder="Please Enter Your Token" [(ngModel)]="token" (input)="userToken($event)" maxlength="10"/>
+        <div class="spinner-border spinner-border-sm" role="status" *ngIf="isSpinner ">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- ======= User or Employee info ======= -->
+    <div *ngIf="data.token">
+      <div>
+      <div class="animationHeight" style="width: 100%;">
+        <div class="section-title">
+          <div class="container-fluid">
+            <input type="password" class="password" maxlength='12' value=''/>
+            <p class="forgot-pass">Forgot password?</p>
+          <button type="button" class="submit" (click)="superAdmin()">Sign In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- End User are Employee info -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="assets/img/ashraf.png" class="img-fluid" style="position: relative;
+            bottom: 55px;
+            width: 64%;
+            margin-left: 100px;">
+            <!-- <img src="assets/img/COLOURBOX18770554.jpg" class="img-fluid" style="position: relative;
+            bottom: 56px; "alt=""> -->
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+            <h3>We promise 'Unbeatable' services both in pricing and quality.</h3>
+            <p class="font-italic">
+              Ashrafairtravels.com is a leading global online travel portal providing a diverse range of world-class, hassle-free travel services online.
+            </p>
+            <ul>
+              <li><i class="icofont-check-circled"></i> Inexpensive</li>
+              <li><i class="icofont-check-circled"></i> Touristy</li>
+              <li><i class="icofont-check-circled"></i> Compact</li>
+            </ul>
+            <p>
+              When you choose Ashraf Travels, your trip is in safe hands. Whilst you are abroad our team is available 24 hours a day, 
+              365 days a year should you need assistance. We do absolutely everything for you, all you need to do is turn up at the airport with your bags and go!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Our services include domestic and international flight booking, tailor-made and inclusive holidays, hotel reservations, visa services, cruises, car rentals, train tickets, worldwide attraction tickets, sightseeings, foreign exchange, travel insurance and much more. More than 85% of clients come back to us for future trips.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-ui-flight"></i></div>
+            <h4 class="title"><a href="">Air Tickets</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+          <!-- <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-stamp"></i></div>
+            <h4 class="title"><a href="">Stamping</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div> -->
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-earth"></i></div>
+            <h4 class="title"><a href="">World Wide Visa Consultancy</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-hotel"></i></div>
+            <h4 class="title"><a href="">Holiday</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-5-star-hotel"></i></div>
+            <h4 class="title"><a href="">Hotels</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-ship"></i></div>
+            <h4 class="title"><a href="">Cruise</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box">
+            <div class="icon"><i class="icofont-exchange"></i></div>
+            <h4 class="title"><a href="">Currency Exchange</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-about">
+              <img src="assets/img/ashraf.png" class="img-fluid" style="width: 20%;margin-left: 109px;">
+              <h3>Ashraf Air Travels</h3>
+              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <div>
+                <i class="icofont-google-map"></i>
+                <p>5/1 Jubilee Street
+                <br>Ulundurpet Taluk
+                <br>Villupuram District
+                <br>Pin Code: 606107
+                <br>Tamil Nadu
+              </p>
+              </div>
+
+              <div>
+                <i class="icofont-envelope"></i>
+                <p>liyagathashraf@gmail.com</p>
+              </div>
+
+              <div>
+                <i class="icofont-phone"></i>
+                <p>+91 94424-77040</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Contact Us Section -->
+
+    <!-- ======= Map Section ======= -->
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sbg!4v1579767901424!5m2!1sen!2sbg" 
+      frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </section>
+    <!-- End Map Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Ashraf Travels</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+  <!-- <app-create-user-info></app-create-user-info> -->
+
+</div>

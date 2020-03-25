@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
+.content {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color:#2a625b;
+	line-height: 1.4em;
+	margin: 20px auto;
+	margin-top: 80px;
+	padding: 20px;
+	width: 100%;
+	max-width: 57%;
+}
+.content ul {
+	margin: .5em 2em;
+	padding: 0;
+}
+.inputContainer{
+position:relative;
+top:100px;
+text-align:center;
+counter-reset:section;
+}
+.inputContainer span{
+	margin-bottom:22px; 
+	display:inline-block;
+}
+.inputContainer span:last-child{
+	margin-bottom:-11px;
+}
+input{
+//text-transform: uppercase;
+background: #eae7e7;
+border:none;
+outline:none;
+display:inline-block;
+height:34px;
+vertical-align:middle;
+position:relative;
+bottom:14px;
+right:9px;
+border-radius:22px;
+width:220px;
+box-sizing:border-box;
+padding:0 18px; 
+}
+input[type="button"]{ 
+//background: rgba(14, 28, 43, 0.9) ! important;
+background: rgb(42, 96, 89) !important;
+color:#fff;
+position:relative;
+//left:9px;
+top:25px; 
+width:100px;
+cursor:pointer;
+}
+.icone-right {
+	color: #2c645d;;
+	text-align: right;
+    padding-right: 13px;
+    bottom: 6px;
+}
+.icone-left {
+	color: #ab333e;
+	text-align:left;
+	padding-left: 14px;
+	top: -11px;
+}
+.input-lable {
+	text-align:left;
+	padding-left: 0px;
+}
+.box {
+  margin-left: -10px !important;
+  margin-top: -12px !important;
+  margin-bottom: 10px;
+  border: none;
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+}
+.box select {
+  background-color: #eae7e7;
+  color: #000000;
+  text-indent: 12px;
+  padding: 12px;
+  height: 34px;
+  width: 222px;
+  border: none;
+  font-size: 16px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.box select option {
+  padding: 30px;
+}
+.cell-number {
+	display: block;
+	margin: 0 px;
+	border: none;
+	padding: 0;
+	width: 15.5ch;
+	text-transform: uppercase;
+	background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 15ch 2px no-repeat;
+	font: 4ch droid sans mono, consolas, monospace;
+	letter-spacing: 0.5ch;
+  }
+//   .cell-number:focus {
+// 	outline: none;
+// 	color: #2d6760 !important;
+//   }
+  .iphone-icone {
+	color:#2c645d;;
+	text-align: right;
+	padding-right: 1px;
+    bottom: 10px;
+    font-size: 31px;
+  }
+  .pincode {
+	color: #2c645d;;
+	display: block;
+    margin: auto;
+    border: none;
+    padding: 0px;
+    text-transform: uppercase;
+    background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/9ch 1px no-repeat;
+    font: 3ch droid sans mono, consolas, monospace;
+    letter-spacing: 0.5ch;
+  }

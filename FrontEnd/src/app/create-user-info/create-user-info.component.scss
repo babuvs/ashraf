@@ -1,0 +1,96 @@
+.body {
+  background-color: #f2f9f8 !important;
+  color: #888888;
+}
+#hero {
+    width: 100%;
+    height: 75vh;
+    background: url("../../assets/img/victor-ene-Cqe5Vvss-VQ-unsplash.jpg") top center;
+    //background: url("../../assets/img/ashraf.png") top center;
+    background-size: cover !important;
+    position: relative;
+    margin-bottom: -80px;
+  }
+
+.token {
+  background-color: #6dbfb600; 
+  border: 0px; 
+  outline: none;
+}
+
+.token::placeholder{
+  color: white;
+}
+
+.alert {
+  margin-top: 2%;
+  text-align: center;
+}
+
+span.step {
+  background:#7d0404;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.6em; 
+}
+
+.animationHeight {
+  height: 170px;
+  background-color: #f2f9f8;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  from {height: 0px;}
+  to {height: 170px;}
+}
+
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #cfcfcf;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 266px;
+  height: 36px;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.submit {
+  margin-top: 6px;
+  margin-bottom: 20px;
+  margin-left: 40%;
+  background: #2d6760;
+  text-transform: uppercase;
+}
+.password {
+  display: block;
+  margin: auto;
+  border: none;
+  padding: 0;
+  width: 10.5ch;
+  text-transform: uppercase;
+  background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 10ch 2px no-repeat;
+  font: 4ch droid sans mono, consolas, monospace;
+  letter-spacing: 0.5ch;
+}
+.password:focus {
+  outline: none;
+  color: #2d6760;
+}
+
+
