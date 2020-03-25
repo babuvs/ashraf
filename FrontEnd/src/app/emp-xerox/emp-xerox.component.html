@@ -1,0 +1,31 @@
+<div class="content" style="margin-top: 3px;">
+    <h2 style="text-align: center">Apply  Passport</h2>
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <p>
+                <span class="input-max">
+                    <input type="number" [(ngModel)]="xeroxCount" (input)="count($event)" placeholder="New Xerox Machine Count">
+                    <span></span>	
+                </span>
+            </p>
+        </div>
+        <div class="col-3"></div>
+    </div>{{xeroxCount}}
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <p>
+                <span class="input-max">
+                    <input type="number" placeholder="Old Xerox Machine Count">
+                    <span></span>	
+                </span>
+            </p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
+.content {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color:#2a625b;
+	line-height: 1.4em;
+	margin: 20px auto;
+	margin-top: 80px;
+	padding: 20px;
+	width: 100%;
+	max-width: 90%;
+}
+.content ul {
+	margin: .5em 2em;
+	padding: 0;
+}
+.input-max {
+    position: relative;
+    font-size: 2.5em;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 3px;
+    display: inline-block;
+    border-radius: 9999em;
+  }
+  .input-max *:not(span) {
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 0 .325em;
+    z-index: 1;
+  }
+  .input-max *:not(span):focus + span {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .input-max span {
+    -webkit-transform: scale(0.993, 0.94);
+            transform: scale(0.993, 0.94);
+    -webkit-transition: opacity .25s, -webkit-transform .5s;
+    transition: opacity .25s, -webkit-transform .5s;
+    transition: transform .5s, opacity .25s;
+    transition: transform .5s, opacity .25s, -webkit-transform .5s;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    margin: 4px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd,  -3px 3px 30px #10abff;
+  }
